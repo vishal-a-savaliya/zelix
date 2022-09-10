@@ -150,7 +150,7 @@ export const Footer = () => {
                             <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-10 text-[#23e6a8]" alt="zelix logo" />Tech</p>
                         </div>
                         <div>
-                            <ul className="flex justify-center gap-6 sm:justify-end">
+                            <ul className="flex justify-center my-8 gap-6 sm:justify-end sm:my-0">
                                 <li>
                                     <a href="/" rel="noopener noreferrer" target="_blank" className="text-[#23e6a8] transition hover:text-[#23e6a87c]">
                                         <span className="sr-only">Facebook</span>
@@ -187,7 +187,7 @@ export const Footer = () => {
                             </ul>
                         </div>
                         <p className="mt-4 text-sm text-center text-gray-500 sm:mt-0 sm:text-right">
-                            Copyright © 2022. All rights reserved.
+                            All rights reserved.
                         </p>
                     </div>
                 </div>

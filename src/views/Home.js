@@ -8,7 +8,7 @@ function Home() {
     return (
         <div className=''>
 
-            <div className="container flex  flex-col-reverse sm:flex-row justify-around bg-white ">
+            <div className="flex  flex-col-reverse sm:flex-row justify-around bg-white ">
 
                 {/* intro */}
                 <div className='flex flex-col items-center justify-center'>
@@ -42,11 +42,11 @@ function Home() {
                 <div className='flex flex-col items-center justify-center'>
                     {/* title */}
                     <div className='mt-20'>
-                        <h1 className='font-semibold text-4xl '>What We Do</h1>
+                        <h1 className='text-3xl font-semibold sm:text-4xl'>What We Do</h1>
                         <hr className='mx-auto mt-2 border-b-2 border-collapse border-[#23e6a8] w-10'></hr>
                     </div>
 
-                    <div className='grid grid-cols-3 gap-x-20 gap-y-14 mt-20'>
+                    <div className='grid grid-cols-1 gap-y-14 mt-20 sm:grid-cols-2 sm:gap-y-14 sm:gap-x-8 md:gap-x-20 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-12 xl:gap-x-20 xl:gap-y-14'>
                         {Service.map((item) => (
 
                             <div key={item.title} className="flex flex-col justify-center items-center">
@@ -71,14 +71,14 @@ function Home() {
                 <div className='flex flex-col items-center justify-center mt-20'>
                     {/* title */}
                     <div className='mt-20'>
-                        <h1 className='font-semibold text-4xl '>Why choose us</h1>
+                        <h1 className='text-3xl font-semibold sm:text-4xl'>Why choose us</h1>
                         <hr className='mx-auto mt-2 border-b-2 border-collapse border-[#23e6a8] w-10'></hr>
                     </div>
 
-                    <div className='grid grid-cols-3 gap-x-10 gap-y-8 mt-20'>
+                    <div className='grid grid-cols-1 gap-4 mt-20  sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-8 xl:gap-x-14 xl:gap-y-12'>
                         {Whyus.map((item) => (
 
-                            <div key={item.title} className="flex flex-col justify-start items-center rounded-lg p-8 bg-[#fefefe5e] shadow-lg hover:bg-white cursor-pointer">
+                            <div key={item.title} className="flex flex-col justify-start items-center rounded-lg p-8 bg-[#fefefef3] shadow-lg hover:bg-[#f5f5f586] cursor-pointer">
 
                                 <div className="">
 
