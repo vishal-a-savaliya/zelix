@@ -19,3 +19,36 @@
 .font-jetbrains{
     font-family: 'JetBrains Mono', monospace !important;
 }
+
+.contact-img{
+    background: url("../src/image/contact us.jpg");
+    background-size: cover;
+    z-index: 2 !important; 
+
+    
+}
+
+.contact-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(54, 84, 99, 0.7);
+    z-index: -1;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px ;
+}
+
+.contact-img > *{
+    z-index: 3;
+}
+
+input::placeholder{
+    font-weight: 300!important;
+}
+
+textarea::placeholder{
+    font-weight: 300 !important;
+}
