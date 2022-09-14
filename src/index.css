@@ -52,7 +52,3 @@ input::placeholder{
 textarea::placeholder{
     font-weight: 300 !important;
 }
-
-div > .place-card-large{
-    display: none !important;
-}

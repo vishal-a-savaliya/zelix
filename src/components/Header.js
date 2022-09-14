@@ -47,7 +47,7 @@ function classNames(...classes) {
 
 export const Header = () => {
     return (
-        <Popover className="relative bg-white z-50">
+        <Popover className="relative bg-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6">
                 <div className="flex items-center justify-between  py-6 px-4 md:justify-between md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">

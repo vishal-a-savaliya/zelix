@@ -2,6 +2,7 @@ import React from 'react'
 import Gif from '../image/zelixtech landing.gif'
 import { Service } from '../Data/data'
 import { Whyus } from '../Data/data'
+import { Technologies } from '../Data/data'
 
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
 
                     <div className='mx-14'>
                         <a
-                            href="#"
+                            href="localhost:3000"
                             className="flex w-[200px] items-center justify-center rounded-md border border-transparent bg-[#1ac086] px-6 py-2 text-lg font-medium text-white shadow-sm hover:bg-[#23e6a8]"
                         >
                             Let's take!
@@ -89,6 +90,42 @@ function Home() {
                                 </div>
                             </div>
 
+                        ))}
+                    </div>
+
+                </div>
+
+
+                {/* Technologies We Serve */}
+
+                <div className='flex flex-col items-center justify-center mt-20 m-4'>
+                    {/* title */}
+                    <div className='mt-20'>
+                        <h1 className='text-3xl font-semibold sm:text-4xl px-4 text-center'>Technologies We Work With</h1>
+                        <hr className='mx-auto mt-2 border-b-2 border-collapse border-[#23e6a8] w-10'></hr>
+                    </div>
+
+                    {/* for medium and large size */}
+                    <div className="hidden sm:grid sm:grid-cols-5 gap-4 mt-20">
+                        {Technologies.map((item) => (
+                            <div className="flex flex-col justify-center">
+                                {item.map((tech) => (
+                                    <div className="h-16 w-36 bg-white my-2 rounded-2xl shadow-md flex justify-center items-center p-2">
+                                        <i className={tech.classes}></i>
+                                        <span>{tech.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* for small size */}
+                    <div className="sm:hidden flex flex-wrap justify-center mx-auto">
+                        {Technologies.flat().map((tech) => (
+                            <div className="h-16 w-36 bg-white my-2 rounded-2xl shadow-md flex justify-center items-center mx-2 p-2">
+                                <i className={tech.classes}></i>
+                                <span>{tech.name}</span>
+                            </div>
                         ))}
                     </div>
 
