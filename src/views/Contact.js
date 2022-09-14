@@ -77,7 +77,7 @@ function contact() {
                             </div>
                             <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
                                 <label className="font-normal text-md text-gray-500 md:w-1/5 md:text-right"></label>
-                                <button type="submmit" className="text-white bg-primary border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-600  text-lg font-normal ">Submmit</button>
+                                <button type="submmit" className="text-white bg-primary border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-600  text-lg font-normal ">Submit</button>
                             </div>
 
                         </div>
