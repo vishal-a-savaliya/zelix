@@ -3,6 +3,7 @@ import Gif from '../image/zelixtech landing.gif'
 import { Service } from '../Data/data'
 import { Whyus } from '../Data/data'
 import { Technologies } from '../Data/data'
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -18,12 +19,12 @@ function Home() {
                     <h3 className='py-4 font-[400] text-center ml-1 text-base text-gray-500'>A Team of passionate Designers and Developers from India</h3>
 
                     <div className='mx-14'>
-                        <a
-                            href="localhost:3000"
-                            className="flex w-[200px] items-center justify-center rounded-md border border-transparent bg-[#1ac086] px-6 py-2 text-lg font-medium text-white shadow-sm hover:bg-[#23e6a8]"
+                        <Link
+                            to='/contact'
+                            className="flex w-[200px] items-center justify-center rounded-md border border-transparent bg-primary px-6 py-2 text-lg font-medium text-white shadow-sm hover:bg-ph"
                         >
                             Let's take!
-                        </a>
+                        </Link>
 
                     </div>
 
@@ -43,7 +44,7 @@ function Home() {
                 <div className='flex flex-col items-center justify-center'>
                     {/* title */}
                     <div className='mt-20'>
-                        <h1 className='text-3xl font-semibold sm:text-4xl'>What We Do</h1>
+                        <h1 className='text-3xl font-semibold sm:text-4xl' id='service'>What We Do</h1>
                         <hr className='mx-auto mt-2 border-b-2 border-collapse border-[#23e6a8] w-10'></hr>
                     </div>
 
@@ -107,7 +108,9 @@ function Home() {
 
                     {/* for medium and large size */}
                     <div className="hidden sm:grid sm:grid-cols-5 gap-4 mt-20">
+
                         {Technologies.map((item) => (
+
                             <div className="flex flex-col justify-center">
                                 {item.map((tech) => (
                                     <div className="h-16 w-36 bg-white my-2 rounded-2xl shadow-md flex justify-center items-center p-2">
@@ -116,7 +119,9 @@ function Home() {
                                     </div>
                                 ))}
                             </div>
+
                         ))}
+
                     </div>
 
                     {/* for small size */}

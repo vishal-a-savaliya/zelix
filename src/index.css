@@ -13,6 +13,18 @@
     html {
         font-family: 'Poppins', sans-serif;
         /* font-family: 'JetBrains Mono', monospace; */
+        
+    }
+}
+
+@layer components {
+    
+    .label {
+        @apply text-primary font-medium md:text-gray-500 md:text-right md:w-1/5;
+    }
+
+    .input{
+        @apply w-full md:ml-4 border-b border-gray-400 focus:border-primary font-normal text-base outline-none text-gray-500 py-1 md:px-1 leading-8 transition-colors duration-200 ease-in-out;
     }
 }
 
@@ -37,8 +49,8 @@
     left: 0;
     background: rgba(54, 84, 99, 0.7);
     z-index: -1;
-    border-top-left-radius: 6px ;
-    border-top-right-radius: 6px ;
+    border-top-left-radius: 0.5rem ;
+    border-top-right-radius: 0.5rem ;
 }
 
 .contact-img > *{

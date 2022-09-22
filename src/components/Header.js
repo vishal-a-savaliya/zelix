@@ -1,49 +1,21 @@
 
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import logo from "../image/Zelixlogo-no-bg.png"
+import { navbar } from '../Data/data'
+import { Link } from 'react-router-dom';
+
+
 import {
 
     Bars3Icon,
-    Squares2X2Icon,
     XMarkIcon,
-    HomeIcon,
-    CubeIcon,
-    EnvelopeIcon,
+
 } from '@heroicons/react/24/outline'
+
 // import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import logo from "../image/Zelixlogo-no-bg.png"
-
-const solutions = [
-    {
-        name: 'Home',
-        description: 'Get a better understanding of where your traffic is coming from.',
-        href: '#',
-        icon: HomeIcon,
-    },
-    {
-        name: 'About',
-        description: 'Speak directly to your customers in a more meaningful way.',
-        href: '#',
-        icon: Squares2X2Icon,
-    },
-    {
-        name: 'Service',
-        description: "Connect with third-party tools that you're already using.",
-        href: '#',
-        icon: CubeIcon,
-    },
-    {
-        name: 'Contact',
-        description: 'Build strategic funnels that will drive your customers to convert',
-        href: '#',
-        icon: EnvelopeIcon,
-    },
-]
 
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 export const Header = () => {
     return (
@@ -51,7 +23,7 @@ export const Header = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6">
                 <div className="flex items-center justify-between  py-6 px-4 md:justify-between md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
+                        <Link to="/">
                             <span className="sr-only">Zelix Tech</span>
                             {/* <img
                                 className="h-10 w-auto sm:h-14"
@@ -59,12 +31,12 @@ export const Header = () => {
                                 alt="Zelix Tech"
                             /> */}
                             <div className="flex justify-center sm:justify-start">
-                                <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-10 text-[#23e6a8]" alt="zelix logo" />Tech</p>
+                                <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-8 mx-1 text-primary" alt="zelix logo" />Tech</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="-my-2 -mr-2 md:hidden">
-                        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#23e6a8]">
+                        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none ">
                             <span className="sr-only">Open menu</span>
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -72,28 +44,28 @@ export const Header = () => {
                     <Popover.Group as="nav" className="hidden space-x-10 md:flex">
 
 
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Home
-                        </a>
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        </Link>
+                        <Link to={{ pathname: "/", hash: "#About" }} className="text-base font-medium text-gray-500 hover:text-gray-900">
                             About
-                        </a>
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        </Link>
+                        <Link to={{ pathname: "/", hash: "#service" }} className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Service
-                        </a>
-                        <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Connect
-                        </a>
+                        </Link>
+                        <Link to="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Contact
+                        </Link>
 
                     </Popover.Group>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 
-                        <a
-                            href="#"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full outline outline-offset-2 outline-1  outline-color: #23e6a8;  px-6 py-2 text-base font-medium text-[#23e6a8] "
+                        <Link
+                            To="/contact"
+                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full outline outline-offset-2 outline-1  outline-color: #23e6a8;  px-6 py-2 text-base font-medium text-primary "
                         >
                             Let's take!
-                        </a>
+                        </Link>
 
 
                     </div>
@@ -121,31 +93,34 @@ export const Header = () => {
                                         alt="Zelix Tech"
                                     /> */}
                                     <div className="flex justify-center sm:justify-start">
-                                        <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-10 text-[#23e6a8]" alt="zelix logo" />Tech</p>
+                                        <Link to="/">
+                                            <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-8 mx-1 text-primary" alt="zelix logo" />Tech</p>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="-mr-2">
-                                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#23e6a8]">
-                                        <span className="sr-only">Close menu</span>
+                                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                                        <span className="sr-only" id='close'>Close menu</span>
                                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                                     </Popover.Button>
                                 </div>
                             </div>
                             <div className="mt-6">
                                 <nav className="grid gap-y-8">
-                                    {solutions.map((item) => (
-                                        <a
+                                    {navbar.map((item) => (
+                                        <Link to={item.href} onClick={() => document.getElementById('close').click()}
                                             key={item.name}
                                             href={item.href}
-                                            className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                                            className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50 "
                                         >
-                                            <item.icon className="h-6 w-6 flex-shrink-0 text-[#23e6a8]" aria-hidden="true" />
+                                            <item.icon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />
                                             <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </nav>
                             </div>
                         </div>
+
                         <div className="space-y-6 py-6 px-5">
                             {/* <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -166,12 +141,12 @@ export const Header = () => {
                                 ))}
                             </div> */}
                             <div>
-                                <a
-                                    href="#"
-                                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#1ac086] px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-[#23e6a8] text-transform: uppercase;"
+                                <Link
+                                    to="/contact"
+                                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-ph text-transform: uppercase;"
                                 >
                                     Let's take!
-                                </a>
+                                </Link>
 
                             </div>
                         </div>

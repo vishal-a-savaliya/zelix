@@ -7,7 +7,37 @@ import {
     RectangleGroupIcon,
     GlobeAsiaAustraliaIcon,
     LinkIcon,
+    HomeIcon,
+    CubeIcon,
+    EnvelopeIcon,
+    Squares2X2Icon,
 } from '@heroicons/react/24/outline'
+
+
+
+export const navbar = [
+    {
+        name: 'Home',
+        href: '/',
+        icon: HomeIcon,
+    },
+    {
+        name: 'About',
+        href: '/',
+        icon: Squares2X2Icon,
+    },
+    {
+        name: 'Service',
+        href: '/',
+        icon: CubeIcon,
+    },
+    {
+        name: 'Contact',
+        href: '/contact',
+        icon: EnvelopeIcon,
+    },
+]
+
 
 export const Service = [
 
