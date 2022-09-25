@@ -2,26 +2,36 @@ import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import Home from './views/Home';
 import Contact from './views/Contact';
-
-import { Route, Routes } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion';
+import { Route, Routes, useLocation } from 'react-router-dom'
+import About from './views/About';
 
 function App() {
+
+  const location = useLocation();
+
   return (
     <>
 
       <Header />
 
-      <Routes>
+      <AnimatePresence>
 
-        <Route path="/" element={<Home />}>
+        <Routes location={location} key={location.key}>
 
-        </Route>
+          <Route path="/" element={<Home />}>
 
-        <Route path="/contact" element={<Contact />}>
+          </Route>
 
-        </Route>
+          <Route path="/contact" element={<Contact />}>
 
-      </Routes>
+          </Route>
+
+          <Route path="/about" element={<About />} />
+
+        </Routes>
+
+      </AnimatePresence>
 
       <Footer />
 

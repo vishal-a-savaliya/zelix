@@ -15,6 +15,7 @@ import {
 
 
 
+
 export const navbar = [
     {
         name: 'Home',
@@ -23,7 +24,7 @@ export const navbar = [
     },
     {
         name: 'About',
-        href: '/',
+        href: '/about',
         icon: Squares2X2Icon,
     },
     {
@@ -71,7 +72,7 @@ export const Service = [
     {
 
         title: "Block-chain Development",
-        description: "Visual Identity, Stationary Kit, Marketing Materials",
+        description: "None-fungible tokens (NFT), solidty, Media, Money Transfer",
         style: "w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFAF73] to-[#FFC990]",
         iconColor: "#9A3FC7",
         icon: LinkIcon
@@ -98,30 +99,22 @@ export const Service = [
 ]
 
 export const Whyus = [
-    {
+    [{
         title: "High Quality Product",
         description: "We use proper methods and hidh skilled team to develop solution that helps your clients to grow their business",
     },
     {
         title: "Dedicated 24/7 Support",
         description: "we are always here to listen you & We love to solve your problems at any time",
-    },
-    {
-        title: "Fastest Development",
-        description: "Your team is always ready to built solution for your clieants",
-    },
-    {
-        title: "High skill Team",
-        description: "We have high skill team for all area of development, who are passionate to built solutions & helping each other",
-    },
-    {
-        title: "Our pricing",
+    }],
+    [{
+        title: "Low pricing",
         description: "we provide our services at lower price with higher quality and support",
     },
     {
-        title: "Campony Culture",
-        description: "we provide our services at lower price with higher quality and support",
-    },
+        title: "Satisfaction Guarantee",
+        description: "we provide 100% Satisfaction Guarantee to your business patners",
+    }],
 ]
 
 export const SatisfiedClients = [
@@ -135,39 +128,105 @@ export const SatisfiedClients = [
 
 export const Technologies = [
     [{
-        name: "Node JS",
-        classes: "devicon-nodejs-plain colored text-3xl p-2"
+        name: "android",
+        url: require("../image/tech/android.svg").default,
     }],
     [{
-        name: "React JS",
-        classes: "devicon-react-original colored text-3xl p-2"
+        name: "flutter",
+        url: require("../image/tech/flutter.svg").default,
     },
     {
-        name: "JavaScript",
-        classes: "devicon-javascript-plain colored text-3xl p-2"
+        name: "java",
+        url: require("../image/tech/java.svg").default,
+    }],
+
+    [{
+        name: "node",
+        url: require("../image/tech/node-js.svg").default,
+    },
+    {
+        name: "php",
+        url: require("../image/tech/php.svg").default,
+    },
+    {
+        name: "react",
+        url: require("../image/tech/react.svg").default,
+    }],
+
+    [{
+        name: "javascript",
+        url: require("../image/tech/javascript.svg").default,
+    },
+    {
+        name: "kotline",
+        url: require("../image/tech/kotlin.svg").default,
     }],
     [{
-        name: "Python",
-        classes: "devicon-python-plain colored text-3xl p-2"
-    },
-    {
-        name: "PHP",
-        classes: "devicon-php-plain colored text-5xl p-2"
-    },
-    {
-        name: "Flutter",
-        classes: "devicon-flutter-plain colored text-3xl p-2"
-    }],
-    [{
-        name: "Java",
-        classes: "devicon-java-plain colored text-3xl p-2"
-    },
-    {
-        name: "Kotline",
-        classes: "devicon-kotlin-plain colored text-3xl p-2"
-    }],
-    [{
-        name: "WordPress",
-        classes: "devicon-wordpress-plain colored text-3xl p-2"
+        name: "wordpress",
+        url: require("../image/tech/wordpress.svg").default,
     }],
 ]
+
+export const Tech = [
+
+    [{
+        name: "android",
+        url: require("../image/tech/android.svg").default,
+    }],
+
+
+    [{
+        name: "flutter",
+        url: require("../image/tech/flutter.svg").default,
+    },
+    {
+        name: "java",
+        url: require("../image/tech/java.svg").default,
+    }],
+
+
+    [{
+        name: "javascript",
+        url: require("../image/tech/javascript.svg").default,
+    },
+    {
+        name: "kotline",
+        url: require("../image/tech/kotlin.svg").default,
+    },
+    {
+        name: "mongodb",
+        url: require("../image/tech/mongodb.svg").default,
+    }],
+
+
+    [{
+        name: "node",
+        url: require("../image/tech/node-js.svg").default,
+    },
+    {
+        name: "php",
+        url: require("../image/tech/php.svg").default,
+    },
+    {
+        name: "react",
+        url: require("../image/tech/react.svg").default,
+    }],
+
+    [{
+        name: "redux",
+        url: require("../image/tech/redux.svg").default,
+    },
+    {
+        name: "tailwind css",
+        url: require("../image/tech/tailwind-css.svg").default,
+    }],
+    [{
+        name: "wordpress",
+        url: require("../image/tech/wordpress.svg").default,
+    }],
+]
+
+// {
+    //     name: "Type script",
+    //     url: require("../image/tech/typescript.svg").default,
+    // },

@@ -1,9 +1,10 @@
 
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import logo from "../image/Zelixlogo-no-bg.png"
-import { navbar } from '../Data/data'
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import logo from "../image/Zelixlogo-no-bg.png";
+import { navbar } from '../Data/data';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 import {
@@ -47,7 +48,7 @@ export const Header = () => {
                         <Link to="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Home
                         </Link>
-                        <Link to={{ pathname: "/", hash: "#About" }} className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link to={{ pathname: "/about", hash: "#About" }} className="text-base font-medium text-gray-500 hover:text-gray-900">
                             About
                         </Link>
                         <Link to={{ pathname: "/", hash: "#service" }} className="text-base font-medium text-gray-500 hover:text-gray-900">
@@ -58,17 +59,24 @@ export const Header = () => {
                         </Link>
 
                     </Popover.Group>
-                    <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+                    <motion.div whileHower={{ scale: 1.1 }} className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
 
-                        <Link
-                            To="/contact"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full outline outline-offset-2 outline-1  outline-color: #23e6a8;  px-6 py-2 text-base font-medium text-primary "
-                        >
-                            Let's take!
+                        <Link to="/contact">
+
+                            <motion.a
+                                whileHover={{
+                                    scale: 1.1,
+                                    // textShadow: "0px 0px 8px #4ade80",
+                                    // boxShadow: "0px 0px 2px #4ade80"
+                                }}
+                                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full outline outline-offset-2 outline-1  outline-color: primary;  px-6 py-2 text-base font-medium text-primary "
+                            >
+                                Let's take!
+                            </motion.a>
                         </Link>
 
 
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

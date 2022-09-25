@@ -1,22 +1,68 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import {
     EnvelopeIcon,
     PhoneIcon,
 } from '@heroicons/react/24/outline'
+import Heading from '../components/Heading'
+
+
+const svg_variants = {
+    initial: {
+        x: 0,
+
+    },
+
+    animate: {
+        x: 15,
+
+        transition: {
+            duration: 1,
+            yoyo: Infinity,
+
+        }
+    }
+
+}
+
+const contact_variants = {
+
+    initial: {
+        opacity: 0,
+        x: '100vw'
+    },
+
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            ease: 'easeInOut',
+            delay: 0.5,
+            duration: 1
+        }
+    },
+
+    exit: {
+        x: '-100vw',
+        transition: {
+            ease: 'easeInOut',
+            duration: 1
+        }
+    }
+}
 
 
 
 function contact() {
 
     return (
-        <div>
+        <motion.div variants={contact_variants} initial='initial' animate='animate' exit='exit'>
 
             {/* contact info */}
 
-            <div className='mt-20 mb-10 items-center flex-col md:my-20'>
+            <div className='mb-10 items-center flex-col md:my-20'>
 
-                <h1 className='text-3xl text-center font-semibold text-gray-700 sm:text-4xl'>GET IN TOUCH</h1>
-                <p className='mx-auto mt-2 border-b-2 border-collapse border-primary w-10'></p>
+                <Heading title={"GET IN TOUCH"} />
 
                 <ul className='flex justify-center flex-col items-center mt-10'>
 
@@ -120,9 +166,11 @@ function contact() {
                                         Send
 
                                         {/* Arrow icon svg */}
-                                        <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <motion.svg variants={svg_variants} initial='initial' animate='animate'
+
+                                            className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
+                                        </motion.svg>
 
                                     </button>
 
@@ -142,7 +190,7 @@ function contact() {
 
 
             {/* main div */}
-        </div>
+        </motion.div>
     )
 }
 

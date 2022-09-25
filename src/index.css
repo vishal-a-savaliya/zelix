@@ -68,3 +68,29 @@ textarea::placeholder{
 div > .place-card-large{
     display: none !important;
 }
+
+.animate > div{
+    animation: anim1 65s linear infinite;
+    animation-delay: -60s;
+}
+
+
+@keyframes anim1{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes anim2{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}

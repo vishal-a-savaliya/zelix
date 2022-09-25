@@ -1,48 +1,69 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../image/Zelixlogo-no-bg.png'
+import Footerlink from './Footerlink'
+import { motion } from 'framer-motion'
+
+
+const svg_variants = {
+    initial: {
+        x: 0,
+    },
+
+    animate: {
+        x: 15,
+        transition: {
+            duration: 1,
+            yoyo: Infinity,
+            type: 'none'
+
+        }
+    }
+
+}
 
 
 export const Footer = () => {
     return (
         <footer className="bg-white">
+
             <div className="px-4 py-16 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+
+
+                {/* footer header grow your Business call to action  */}
                 <div className="flex flex-col items-center p-6 bg-primary rounded-lg shadow-lg gap-4 sm:flex-row sm:justify-between">
+
+
                     <strong className="text-xl text-white sm:text-xl">
                         Grow your Business Now!
                     </strong>
-                    <Link className="inline-flex items-center px-8 py-3 text-primary bg-white border border-white rounded-full hover:bg-transparent hover:text-white active:bg-white/90 focus:outline-none focus:ring" to="/contact">
-                        <span className="text-sm font-medium"> Let's Get Started </span>
-                        <svg className="w-5 h-5 ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+
+                    <Link to="/contact">
+
+                        <a className="inline-flex items-center px-8 py-3 text-primary bg-white border border-white rounded-full active:bg-white/90 focus:outline-none focus:ring" >
+                            <span className="text-sm font-medium"> Let's Get Started </span>
+                            <motion.svg variants={svg_variants} initial='inital' animate='animate' className="w-5 h-5 ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </motion.svg>
+                        </a>
                     </Link>
                 </div>
+
+
+
+
+                {/* footer links */}
+
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="text-center sm:text-left">
                         <p className="text-lg font-medium text-gray-900">About Us</p>
                         <nav className="mt-8">
                             <ul className="text-sm space-y-4">
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Company History
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Meet the Team
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Employee Handbook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Careers
-                                    </a>
-                                </li>
+
+                                <Footerlink name={"Company History"} link={"/"} />
+                                <Footerlink name={"Meet the Team"} link={"/"} />
+                                <Footerlink name={"Carreers"} link={"/"} />
+
                             </ul>
                         </nav>
                     </div>
@@ -50,36 +71,13 @@ export const Footer = () => {
                         <p className="text-lg font-medium text-gray-900">Our Services</p>
                         <nav className="mt-8">
                             <ul className="text-sm space-y-4">
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Web Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        App Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Marketing & Branding
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        AI/ML Developement
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Blockchain Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        UI/UX Development
-                                    </a>
-                                </li>
+
+                                <Footerlink name={"Web Development"} link={"/"} />
+                                <Footerlink name={"App Development"} link={"/"} />
+                                <Footerlink name={"Marketing & Branding"} link={"/"} />
+                                <Footerlink name={"AI/ML Developement"} link={"/"} />
+                                <Footerlink name={"Blockchain Development"} link={"/"} />
+                                <Footerlink name={"UI/UX Development"} link={"/"} />
 
                             </ul>
                         </nav>
@@ -120,16 +118,11 @@ export const Footer = () => {
                         <p className="text-lg font-medium text-gray-900">Helpful Links</p>
                         <nav className="mt-8">
                             <ul className="text-sm space-y-4">
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        FAQs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/">
-                                        Support
-                                    </a>
-                                </li>
+
+                                <Footerlink name={"FAQs"} link={"/"} />
+                                <Footerlink name={"Support"} link={"/contact"} />
+
+
                                 {/* <li>
                                     <a className="flex group justify-center gap-1.5 sm:justify-start" href="/">
                                         <span className="text-gray-700 transition group-hover:text-gray-700/75">
@@ -148,9 +141,9 @@ export const Footer = () => {
                 <div className="mt-16">
 
                     <div className="mt-16 sm:flex sm:justify-between sm:items-center">
-                        <div className="flex justify-center sm:justify-start">
+                        <motion.div whileHover={{ scale: 1.2 }} className="flex justify-center sm:justify-start">
                             <p className='text-sm font-medium text-gray-900 flex flex-row items-center'>Zeli <img src={logo} className="w-8 mx-1 text-primary" alt="zelix logo" />Tech</p>
-                        </div>
+                        </motion.div>
                         <div>
                             <ul className="flex justify-center my-8 gap-6 sm:justify-end sm:my-0">
                                 <li>
