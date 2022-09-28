@@ -1,7 +1,8 @@
 import React from 'react'
 import Heading from '../components/Heading'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
 import {
     EnvelopeIcon,
     PhoneIcon,
@@ -57,7 +58,23 @@ const contact_variants = {
 function Contact() {
 
 
-    const [submmit, setSubmmit] = useState(true);
+    const form = useRef();
+
+    const [submmit, setSubmmit] = useState(false);
+
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_7lwrcve', 'template_jn11elp', form.current, 'NJAMm2VeG3baNR6-j')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        setSubmmit(!submmit)
+    };
 
 
     return (
@@ -116,7 +133,7 @@ function Contact() {
 
                         <div className="bg-primary relative flex flex-wrap justify-center p-5 w-[95%] h-[600px] shadow-lg md:shadow-md  my-[10%] mx-auto rounded-lg sm:h-[700px] sm:w-[70%] md:w-[690px] md:my-[15%] ">
 
-                            <XMarkIcon className="absolute h-6 w-6 flex-shrink-0 text-white right-2 m-3" onClick={() => { setSubmmit(!submmit) }} aria-hidden="true" />
+                            <XMarkIcon className="absolute h-6 w-6 flex-shrink-0 text-white right-2 m-3 hover:cursor-pointer" onClick={() => { setSubmmit(!submmit) }} aria-hidden="true" />
 
                             <div className='flex flex-col justify-center w-[400px]'>
                                 <h1 className='text-7xl text-white text-left font-extralight '>Thank</h1>
@@ -147,36 +164,34 @@ function Contact() {
                                 <div className='flex justify-between flex-col w-full flex-wrap mx-6 md:mx-20 my-14'>
 
                                     {/* form section */}
-                                    <form action='https://formsubmit.co/contact.zelixtech@gmail.com' method='POST' >
+                                    <form ref={form} onSubmit={sendEmail}>
 
-                                        <input type="hidden" name="_captcha" value="false"></input>
-                                        <input type="hidden" name="_next" value="zelixtexh.com/contact"></input>
 
                                         <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
 
                                             <label htmlFor="name" className="label">Full Name:</label>
-                                            <input type="text" id="name" name="name" placeholder='Enter full name' autocomplete="off" className="input" />
+                                            <input type="text" id="name" name="name" placeholder='Enter full name' autocomplete="off" className="input" required />
 
                                         </div>
 
                                         <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
 
                                             <label htmlFor="email" className="label">Email:</label>
-                                            <input type="text" id="email" name="email" placeholder='Enter email Address' autocomplete="off" className="input" />
+                                            <input type="email" id="email" name="email" placeholder='Enter email Address' autocomplete="off" className="input" required />
 
                                         </div>
 
                                         <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
 
                                             <label htmlFor="phone" className="label">Phone:</label>
-                                            <input type="text" id="phone" name="phone" placeholder='Enter phone number' autocomplete="off" className="input" />
+                                            <input type="text" id="phone" name="phone" placeholder='Enter phone number' autocomplete="off" className="input" required />
 
                                         </div>
 
                                         <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
 
                                             <label htmlFor="message" className="label">Message:</label>
-                                            <textarea id="message" name="message" placeholder='Your Comments...' autocomplete="off" className="input" defaultValue={""} />
+                                            <textarea id="message" name="message" placeholder='Your Comments...' autocomplete="off" className="input" defaultValue={""} required />
 
                                         </div>
 
@@ -186,7 +201,7 @@ function Contact() {
 
                                             {/* send button */}
 
-                                            <button type="submmit" className="text-white bg-green-400 flex items-center shadow-green-400/50 shadow-lg justify-around border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-500  text-lg font-normal " onClick={() => { setSubmmit(!submmit) }}>
+                                            <button type="submmit" className="text-white bg-green-400 flex items-center shadow-green-400/50 shadow-lg justify-around border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-500  text-lg font-normal " >
 
                                                 Send
 
