@@ -1,16 +1,17 @@
 import React from 'react'
+import Heading from '../components/Heading'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import {
     EnvelopeIcon,
     PhoneIcon,
+    XMarkIcon,
 } from '@heroicons/react/24/outline'
-import Heading from '../components/Heading'
 
 
 const svg_variants = {
     initial: {
         x: 0,
-
     },
 
     animate: {
@@ -53,7 +54,11 @@ const contact_variants = {
 
 
 
-function contact() {
+function Contact() {
+
+
+    const [submmit, setSubmmit] = useState(true);
+
 
     return (
         <motion.div variants={contact_variants} initial='initial' animate='animate' exit='exit'>
@@ -76,7 +81,7 @@ function contact() {
                             <li className='flex'> <PhoneIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> +91 9510342875</li>
                         </a>
                         <a href='mailto:contact.zelixtech@gmail.com' className='p-2'>
-                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> contact.zelixtech@gmail.com</li>
+                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> <span className='pl-1'>contact.zelixtech@gmail.com</span></li>
                         </a>
                     </div>
 
@@ -106,83 +111,106 @@ function contact() {
 
 
                     {/* contact form div */}
-                    <div className="bg-white relative flex flex-wrap w-[95%]  shadow-lg md:shadow-md  my-[10%] mx-auto rounded-lg sm:w-[70%] md:w-[690px] md:my-[15%] ">
 
-                        {/* image & info  */}
-                        <div className='relative contact-img bg-cover md:bg-center w-full rounded-t-md'>
+                    {submmit ? (
 
-                            <div className='text-center mx-auto my-16 text-white'>
-                                <h2 className='font-medium text-3xl '>Contact Us</h2>
-                                <p className='mx-auto mt-1 border-b-2 border-collapse border-[#23e6a8] w-10'></p>
-                                <p className='text-md py-4  '>Feel free to drop us a line below!</p>
+                        <div className="bg-primary relative flex flex-wrap justify-center p-5 w-[95%] h-[600px] shadow-lg md:shadow-md  my-[10%] mx-auto rounded-lg sm:h-[700px] sm:w-[70%] md:w-[690px] md:my-[15%] ">
+
+                            <XMarkIcon className="absolute h-6 w-6 flex-shrink-0 text-white right-2 m-3" onClick={() => { setSubmmit(!submmit) }} aria-hidden="true" />
+
+                            <div className='flex flex-col justify-center w-[400px]'>
+                                <h1 className='text-7xl text-white text-left font-extralight '>Thank</h1>
+                                <h1 className='text-8xl text-white text-left font-bold'>You .</h1>
+                                <h1 className='text-gray-800 text-3xl px-1 py-5 pl-2 font-semibold opacity-75'>for being so nice.</h1>
+                                <h1 className='text-white text-2xl px-1 py-10 pl-2 font-semibold'>We'll be in touch shortly!</h1>
                             </div>
 
-                        </div>
+                        </div>)
 
-                        {/* contact form  */}
-                        <div className='flex justify-between flex-col w-full flex-wrap mx-6 md:mx-20 my-14'>
 
-                            {/* form section */}
-                            <form action='https://formsubmit.co/contact.zelixtech@gmail.com' method='POST' >
+                        : (
 
-                                <input type="hidden" name="_captcha" value="false"></input>
+                            <div className="bg-white relative flex flex-wrap w-[95%]  shadow-lg md:shadow-md  my-[10%] mx-auto rounded-lg sm:w-[70%] md:w-[690px] md:my-[15%] ">
 
-                                <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
+                                {/* image & info  */}
+                                <div className='relative contact-img bg-cover md:bg-center w-full rounded-t-md'>
 
-                                    <label htmlFor="name" className="label">Full Name:</label>
-                                    <input type="text" id="name" name="name" placeholder='Enter full name' autocomplete="off" className="input" />
-
-                                </div>
-
-                                <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
-
-                                    <label htmlFor="email" className="label">Email:</label>
-                                    <input type="text" id="email" name="email" placeholder='Enter email Address' autocomplete="off" className="input" />
+                                    <div className='text-center mx-auto my-16 text-white'>
+                                        <h2 className='font-medium text-3xl '>Contact Us</h2>
+                                        <p className='mx-auto mt-1 border-b-2 border-collapse border-[#23e6a8] w-10'></p>
+                                        <p className='text-md py-4  '>Feel free to drop us a line below!</p>
+                                    </div>
 
                                 </div>
 
-                                <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
+                                {/* contact form  */}
+                                <div className='flex justify-between flex-col w-full flex-wrap mx-6 md:mx-20 my-14'>
 
-                                    <label htmlFor="phone" className="label">Phone:</label>
-                                    <input type="text" id="phone" name="phone" placeholder='Enter phone number' autocomplete="off" className="input" />
+                                    {/* form section */}
+                                    <form action='https://formsubmit.co/contact.zelixtech@gmail.com' method='POST' >
 
-                                </div>
+                                        <input type="hidden" name="_captcha" value="false"></input>
+                                        <input type="hidden" name="_next" value="zelixtexh.com/contact"></input>
 
-                                <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
+                                        <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
 
-                                    <label htmlFor="message" className="label">Message:</label>
-                                    <textarea id="message" name="message" placeholder='Your Comments...' autocomplete="off" className="input" defaultValue={""} />
+                                            <label htmlFor="name" className="label">Full Name:</label>
+                                            <input type="text" id="name" name="name" placeholder='Enter full name' autocomplete="off" className="input" />
 
-                                </div>
+                                        </div>
 
-                                <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
+                                        <div className="w-full flex md:items-baseline mb-6 flex-col md:flex-row">
 
-                                    <label className="lable"></label>
+                                            <label htmlFor="email" className="label">Email:</label>
+                                            <input type="text" id="email" name="email" placeholder='Enter email Address' autocomplete="off" className="input" />
 
-                                    {/* send button */}
+                                        </div>
 
-                                    <button type="submmit" className="text-white bg-green-400 flex items-center shadow-green-400/50 shadow-lg justify-around border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-500  text-lg font-normal ">
+                                        <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
 
-                                        Send
+                                            <label htmlFor="phone" className="label">Phone:</label>
+                                            <input type="text" id="phone" name="phone" placeholder='Enter phone number' autocomplete="off" className="input" />
 
-                                        {/* Arrow icon svg */}
-                                        <motion.svg variants={svg_variants} initial='initial' animate='animate'
+                                        </div>
 
-                                            className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </motion.svg>
+                                        <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
 
-                                    </button>
+                                            <label htmlFor="message" className="label">Message:</label>
+                                            <textarea id="message" name="message" placeholder='Your Comments...' autocomplete="off" className="input" defaultValue={""} />
 
-                                </div>
+                                        </div>
 
-                            </form>
+                                        <div className="w-full flex mb-6 md:items-baseline flex-col md:flex-row">
+
+                                            <label className="lable"></label>
+
+                                            {/* send button */}
+
+                                            <button type="submmit" className="text-white bg-green-400 flex items-center shadow-green-400/50 shadow-lg justify-around border-0 py-2 px-6  mt-4 w-[150px] rounded-full focus:outline-none hover:bg-green-500  text-lg font-normal " onClick={() => { setSubmmit(!submmit) }}>
+
+                                                Send
+
+                                                {/* Arrow icon svg */}
+                                                <motion.svg variants={svg_variants} initial='initial' animate='animate'
+
+                                                    className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                                </motion.svg>
+
+                                            </button>
+
+                                        </div>
+
+                                    </form>
 
 
-                        </div> {/* end of contact from */}
+                                </div> {/* end of contact from */}
 
 
-                    </div> {/* end  contact from div*/}
+                            </div>
+                        )}
+
+
 
                 </div>
 
@@ -194,4 +222,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact

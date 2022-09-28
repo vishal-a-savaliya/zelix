@@ -8,9 +8,9 @@ import {
     GlobeAsiaAustraliaIcon,
     LinkIcon,
     HomeIcon,
-    CubeIcon,
+    // CubeIcon,
     EnvelopeIcon,
-    Squares2X2Icon,
+    // Squares2X2Icon,
 } from '@heroicons/react/24/outline'
 
 
@@ -23,14 +23,9 @@ export const navbar = [
         icon: HomeIcon,
     },
     {
-        name: 'About',
-        href: '/about',
-        icon: Squares2X2Icon,
-    },
-    {
-        name: 'Service',
-        href: '/',
-        icon: CubeIcon,
+        name: 'UX/UI Design',
+        href: '/uxuidesign',
+        icon: RectangleGroupIcon,
     },
     {
         name: 'Contact',
@@ -72,7 +67,7 @@ export const Service = [
     {
 
         title: "Block-chain Development",
-        description: "None-fungible tokens (NFT), solidty, Media, Money Transfer",
+        description: "None-fungible tokens (NFT), solidity, Media, Money Transfer",
         style: "w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-r from-[#FFAF73] to-[#FFC990]",
         iconColor: "#9A3FC7",
         icon: LinkIcon
@@ -101,7 +96,7 @@ export const Service = [
 export const Whyus = [
     [{
         title: "High Quality Product",
-        description: "We use proper methods and hidh skilled team to develop solution that helps your clients to grow their business",
+        description: "We use proper methods and high skilled team to develop solution that helps your clients to grow their business",
     },
     {
         title: "Dedicated 24/7 Support",
@@ -113,7 +108,7 @@ export const Whyus = [
     },
     {
         title: "Satisfaction Guarantee",
-        description: "we provide 100% Satisfaction Guarantee to your business patners",
+        description: "we provide 100% Satisfaction Guarantee to your business partners",
     }],
 ]
 
@@ -226,7 +221,41 @@ export const Tech = [
     }],
 ]
 
-// {
-    //     name: "Type script",
-    //     url: require("../image/tech/typescript.svg").default,
-    // },
+export const designs = [
+    {
+        url: require("../image/ui ux/1.png")
+    },
+    {
+        url: require("../image/ui ux/8.png")
+    },
+    {
+        url: require("../image/ui ux/3.png")
+    },
+    {
+        url: require("../image/ui ux/4.png")
+    },
+    {
+        url: require("../image/ui ux/5.png")
+    },
+    {
+        url: require("../image/ui ux/6.png")
+    },
+    {
+        url: require("../image/ui ux/7.png")
+    },
+    {
+        url: require("../image/ui ux/2.png")
+    },
+    {
+        url: require("../image/ui ux/9.png")
+    },
+    {
+        url: require("../image/ui ux/10.png")
+    },
+    {
+        url: require("../image/ui ux/11.png")
+    },
+    {
+        url: require("../image/ui ux/12.png")
+    },
+]

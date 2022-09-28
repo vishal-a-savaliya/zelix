@@ -1,5 +1,5 @@
 import React from 'react'
-import Gif from '../image/zelixtech landing.gif'
+import Gif from '../image/zelixtexh.gif'
 import { Service, Technologies } from '../Data/data'
 import { Whyus } from '../Data/data'
 import { Link } from 'react-router-dom'
@@ -30,18 +30,18 @@ const home_variants = {
     }
 }
 
-const tech_svg = {
-    initial: {
+// const tech_svg = {
+//     initial: {
 
-    },
+//     },
 
-    animate: {
-        scale: 1.2,
-        transition: {
-            ease: 'easeInOut'
-        }
-    }
-}
+//     animate: {
+//         scale: 1.2,
+//         transition: {
+//             ease: 'easeInOut'
+//         }
+//     }
+// }
 
 
 
@@ -57,6 +57,10 @@ function Home() {
 
                     <motion.h1 transition={{ delay: 0, type: 'spring', stiffness: 120 }} initial={{ y: -90 }} animate={{ fontSize: 50, y: -10 }} className="text-4xl text-center px-4 font-[Poppins] font-semibold  sm:text-5xl md:text-6xl text-primary">We are Zelix Tech</motion.h1>
                     <h3 className='py-4 px-4 font-[500] text-center ml-1 text-base text-gray-700'>A Team of passionate Designers and Developers from India</h3>
+
+                    <div>
+                        <h1 className='text-xl font-semibold p-2 pb-5 md:text-2xl text-slate-700'>Let's start something big with us.</h1>
+                    </div>
 
                     <motion.div className='mx-14' transition={{ delay: 1.2, duration: 2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                         <Link
@@ -79,7 +83,7 @@ function Home() {
 
             {/* body section  */}
 
-            <div className='bg-gradient-to-b from-[#FFF] to-[#F6F8FC]'>
+            <div className='bg-gradient-to-b from-[#FFF] to-[#F6F8FC]' id='services'>
 
                 <div className='flex flex-col items-center justify-center mt-10'>
 
@@ -97,7 +101,7 @@ function Home() {
                                 </div>
                                 <div>
                                     <h3 className='text-center text-lg font-semibold text-slate-900 py-4'>{item.title}</h3>
-                                    <p className="text-center w-[250px] font-jetbrains">{item.description}</p>
+                                    <p className="text-center w-[250px] font-light text-sm">{item.description}</p>
                                 </div>
                             </motion.div>
 
@@ -111,32 +115,27 @@ function Home() {
 
                 <div className='flex flex-col items-center justify-center mt-20'>
                     {/* title */}
-                    <Heading title={"What We Guarantee"} />
+                    <Heading title={"Why choose Zelix Tech"} stitle={"why choose zelixtech"} />
 
                     <div className='flex flex-col-reverse justify-center items-center mt-10 md:mt-20 md:flex-row'>
 
 
-                        <div className='flex flex-col  md:flex-row'>
+                        <div className='flex flex-col  sm:flex-row'>
 
                             {Whyus.map((element) => (
-                                <div className='m-0 md:first:pt-10 md:m-4'>
+                                <div className='m-0 md:first:pt-10 sm:m-4'>
                                     {element.map((item) => (
-                                        <div key={item.title} className="flex flex-col justify-start bg-white items-center shadow-xl shadow-gray-200 rounded-md p-8 cursor-pointer my-6 hover:text-white hover:bg-green-400 
+                                        <motion.div whileHover={{ scale: 1.04 }} transition={{ ease: 'easeInOut' }} animate={{}} key={item.title} className="flex flex-col justify-start bg-white items-center shadow-xl shadow-gray-200 rounded-md p-8 cursor-pointer my-6 hover:text-white hover:bg-green-400 
                                         
                                         first:my-3
 
-                                        odd:mr-6
-                                        even:ml-6
-                                        
-                                        md:odd:mr-0
-                                        md:even:ml-0
                                         
                                         ">
                                             <div>
                                                 <h3 className='text-left text-lg font-semibold text-gray-800 py-4'>{item.title}</h3>
                                                 <p className="w-[200px] text-sm text-justify">{item.description}</p>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     ))}
                                 </div>
                             ))}
@@ -149,9 +148,9 @@ function Home() {
 
                                 <h1 className='text-2xl text-gray-800 py-3 font-semibold'>Quality on time</h1>
 
-                                <p className='py-4 text-sm'>We have highly skilled people, The team wo can develop learn build high Quality prodocts and Guarantee the high performance and quality of product to be delivered on time.</p>
+                                <p className='py-4 text-sm'>We have highly skilled people, The team who can develop, learn & build high Quality products and Guarantee the high performance and quality of product to be delivered on time.</p>
                                 <p className='py-4 text-sm'>
-                                    Our team is always here to help our business patners & exited Build solution that can hlep your patners to grow therir business.
+                                    Our team is always here to help our business partners & excited to Build solution that can help your partners to grow their business.
                                 </p>
 
                             </div>
@@ -180,8 +179,8 @@ function Home() {
 
                             <div className="flex justify-center md:flex-col">
                                 {item.map((icon) => (
-                                    <motion.div whileHover={{ scale: 1.1 }}
-                                        className='h-16 w-16 bg-primary shadow-xl rounded-lg  shadow-green-400/90 mx-6 my-4 z-10 p-3 md:m-5 md:h-20 md:w-20'>
+                                    <motion.div whileHover={{ scale: 1.2 }}
+                                        className='h-16 w-16 bg-green-400/95 shadow-sm shadow-green-400 rounded-lg   mx-6 my-4 z-10 p-3 md:m-5 md:h-20 md:w-20'>
                                         <img src={icon.url} alt="tech" className='w-full invert p-1 md:p-2' />
                                         {/* <h1>{icon.name}</h1> */}
                                     </motion.div>

@@ -13,7 +13,8 @@
     html {
         font-family: 'Poppins', sans-serif;
         /* font-family: 'JetBrains Mono', monospace; */
-        
+        scroll-behavior: smooth;
+            
     }
 }
 
@@ -57,6 +58,7 @@
     z-index: 3;
 }
 
+
 input::placeholder{
     font-weight: 300!important;
 }
@@ -93,4 +95,18 @@ div > .place-card-large{
     100%{
         transform: translateX(0%);
     }
+}
+
+
+
+/* ui ux design  */
+
+.design{
+    box-shadow: 0 30px 60px #969bbb33;
+}
+
+.design:hover{
+    transform: rotate(0deg) scale(1) translateX(0) translateZ(0);
+    transition: all .3s ease;
+    cursor: pointer;
 }

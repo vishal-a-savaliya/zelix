@@ -5,6 +5,7 @@ import Contact from './views/Contact';
 import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom'
 import About from './views/About';
+import Uxui from './views/Uxui';
 
 function App() {
 
@@ -13,15 +14,15 @@ function App() {
   return (
     <>
 
+
       <Header />
 
       <AnimatePresence>
 
         <Routes location={location} key={location.key}>
 
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<Home />} />
 
-          </Route>
 
           <Route path="/contact" element={<Contact />}>
 
@@ -29,11 +30,14 @@ function App() {
 
           <Route path="/about" element={<About />} />
 
+          <Route path="/uxuidesign" element={<Uxui />} />
+
         </Routes>
 
       </AnimatePresence>
 
       <Footer />
+
 
     </>
   );

@@ -48,12 +48,12 @@ export const Footer = () => {
 
                         <Link to="/contact">
 
-                            <p className="inline-flex items-center px-8 py-3 text-primary bg-white border border-white rounded-full active:bg-white/90 focus:outline-none focus:ring" >
+                            <a className="inline-flex items-center px-8 py-3 text-primary bg-white border border-white rounded-full active:bg-white/90 focus:outline-none focus:ring" >
                                 <span className="text-sm font-medium"> Let's Get Started </span>
                                 <motion.svg variants={svg_variants} initial='inital' animate='animate' className="w-5 h-5 ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </motion.svg>
-                            </p>
+                            </a>
                         </Link>
                     </div>
 
@@ -63,14 +63,18 @@ export const Footer = () => {
                     {/* footer links */}
 
                     <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 sm:pl-10 md:pl-0">
-                        <div className="text-center sm:text-left">
+                        {/* <div className="text-center sm:text-left">
                             <p className="text-lg font-medium text-gray-900">About Us</p>
                             <nav className="mt-8">
                                 <ul className="text-sm space-y-4">
-                                    <p className='w-[80%] md:text-justify m-auto sm:m-0'>We are zelixtech, helping business grow digitally. A Team of passionate Designers and Developers from India</p>
+
+                                    <Footerlink name={"Company History"} link={"/"} />
+                                    <Footerlink name={"Meet the Team"} link={"/"} />
+                                    <Footerlink name={"Carreers"} link={"/"} />
+
                                 </ul>
                             </nav>
-                        </div>
+                        </div> */}
                         <div className="text-center sm:text-left">
                             <p className="text-lg font-medium text-gray-900">Our Services</p>
                             <nav className="mt-8">
@@ -79,7 +83,7 @@ export const Footer = () => {
                                     <Footerlink name={"Web Development"} link={"/"} />
                                     <Footerlink name={"App Development"} link={"/"} />
                                     <Footerlink name={"Marketing & Branding"} link={"/"} />
-                                    <Footerlink name={"AI/ML Development"} link={"/"} />
+                                    <Footerlink name={"AI/ML Developement"} link={"/"} />
                                     <Footerlink name={"Blockchain Development"} link={"/"} />
                                     <Footerlink name={"UI/UX Development"} link={"/"} />
 
@@ -102,7 +106,7 @@ export const Footer = () => {
                             <nav className="mt-8">
                                 <ul className="text-sm space-y-4 flex flex-col items-center justify-center sm:items-start">
 
-                                    {/* <Footerlink name={"FAQs"} link={"/"} /> */}
+                                    <Footerlink name={"FAQs"} link={"/"} />
                                     <Footerlink name={"Support"} link={"/contact"} />
 
                                     <motion.li whileHover={{ scale: 1.2, originX: 0 }}
@@ -144,7 +148,7 @@ export const Footer = () => {
                             <div>
                                 <ul className="flex justify-center my-8 gap-6 sm:justify-end sm:my-0">
                                     <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100086145408915" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
+                                        <a href="/" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
                                             <span className="sr-only">Facebook</span>
 
                                             <svg className="w-5 h-6" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
@@ -152,7 +156,7 @@ export const Footer = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://instagram.com/zelixtech" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
+                                        <a href="/" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
                                             <span className="sr-only">Instagram</span>
                                             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z"></path><path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164 5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31 3.155 3.155 0 0 1 0 6.31z"></path><circle cx="15.156" cy="4.858" r="1.237"></circle></svg>
                                         </a>
@@ -164,7 +168,7 @@ export const Footer = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/zelix-tech-62600b250" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
+                                        <a href="/" rel="noopener noreferrer" target="_blank" className="text-primary transition hover:text-[#23e6a87c]">
                                             <span className="sr-only">linked In</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg>
                                         </a>
