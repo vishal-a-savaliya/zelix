@@ -97,8 +97,8 @@ function Contact() {
                         <a href='callto:9510342875' className='p-2'>
                             <li className='flex'> <PhoneIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> +91 9510342875</li>
                         </a>
-                        <a href='mailto:contact.zelixtech@gmail.com' className='p-2'>
-                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> <span className='pl-1'>contact.zelixtech@gmail.com</span></li>
+                        <a href='mailto:contact@zelixtech.com' className='p-2'>
+                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" /> <span className='pl-1'>contact@zelixtech.com</span></li>
                         </a>
                     </div>
 

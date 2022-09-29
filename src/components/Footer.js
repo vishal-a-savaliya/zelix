@@ -114,8 +114,8 @@ export const Footer = () => {
 
                                     <motion.li whileHover={{ scale: 1.2, originX: 0 }}
                                         transition={{ type: "spring", stiffness: 150 }} className="hover:text-primary">
-                                        <a href='mailto:contact.zelixtech@gmail.com'>
-                                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary pr-1" aria-hidden="true" /> contact.zelixtech@gmail.com</li>
+                                        <a href='mailto:contact@zelixtech.com'>
+                                            <li className='flex'> <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-primary pr-1" aria-hidden="true" /> contact@zelixtech.com</li>
                                         </a>
                                     </motion.li>
 
