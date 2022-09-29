@@ -67,7 +67,7 @@ export const Footer = () => {
                             <p className="text-lg font-medium text-gray-900">About Us</p>
                             <nav className="mt-8">
                                 <ul className="text-sm space-y-4">
-                                    <p className='w-[80%] md:text-justify m-auto sm:m-0'>We are zelixtech, helping business grow digitally. A Team of passionate Designers and Developers from India</p>
+                                    <p className='w-[80%] md:text-justify m-auto sm:m-0'>We are ZelixTech, helping business grow digitally. A Team of passionate Designers and Developers from India</p>
                                 </ul>
                             </nav>
                         </div>
@@ -76,12 +76,12 @@ export const Footer = () => {
                             <nav className="mt-8">
                                 <ul className="text-sm space-y-4">
 
-                                    <Footerlink name={"Web Development"} link={"/"} />
-                                    <Footerlink name={"App Development"} link={"/"} />
-                                    <Footerlink name={"Marketing & Branding"} link={"/"} />
-                                    <Footerlink name={"AI/ML Development"} link={"/"} />
-                                    <Footerlink name={"Blockchain Development"} link={"/"} />
-                                    <Footerlink name={"UI/UX Development"} link={"/"} />
+                                    <Footerlink name={"Web Development"} link={"/#services"} />
+                                    <Footerlink name={"App Development"} link={"/#services"} />
+                                    <Footerlink name={"Marketing & Branding"} link={"/#services"} />
+                                    <Footerlink name={"AI/ML Development"} link={"/#services"} />
+                                    <Footerlink name={"Blockchain Development"} link={"/#services"} />
+                                    <Footerlink name={"UI/UX Development"} link={"/#services"} />
 
                                 </ul>
                             </nav>
@@ -93,7 +93,7 @@ export const Footer = () => {
                                     <Footerlink name={"Home"} link={"/"} />
                                     <Footerlink name={"Contact"} link={"/contact"} />
                                     <Footerlink name={"About"} link={"/about"} />
-                                    <Footerlink name={"Services"} link={"/"} />
+                                    <Footerlink name={"Services"} link={"/#services"} />
                                 </ul>
                             </nav>
                         </div>

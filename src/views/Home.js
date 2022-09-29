@@ -127,9 +127,7 @@ function Home() {
                                     {element.map((item) => (
                                         <motion.div whileHover={{ scale: 1.04 }} transition={{ ease: 'easeInOut' }} animate={{}} key={item.title} className="flex flex-col justify-start bg-white items-center shadow-xl shadow-gray-200 rounded-md p-8 cursor-pointer my-6 hover:text-white hover:bg-green-400 
                                         
-                                        first:my-3
-
-                                        
+                                        first:my-3                                        
                                         ">
                                             <div>
                                                 <h3 className='text-left text-lg font-semibold text-gray-800 py-4'>{item.title}</h3>

@@ -99,7 +99,7 @@ export const Header = () => {
                                         }}
                                         className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-full outline outline-offset-2 outline-1  outline-color: primary;  px-6 py-2 text-base font-medium text-primary "
                                     >
-                                        Let's take!
+                                        Let's talk!
                                     </motion.a>
                                 </Link>
 
