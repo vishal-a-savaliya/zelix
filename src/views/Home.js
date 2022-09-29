@@ -59,7 +59,7 @@ function Home() {
                     <h3 className='py-4 px-4 font-[500] text-center ml-1 text-base text-gray-700'>A Team of passionate Designers and Developers from India</h3>
 
                     <div>
-                        <h1 className='text-xl font-semibold p-2 pb-5 md:text-2xl text-slate-700'>Let's start something big with us.</h1>
+                        <h1 className='text-xl text-center font-semibold p-2 pb-5 md:text-2xl text-slate-700'>Let's start something big with us.</h1>
                     </div>
 
                     <motion.div className='mx-14' transition={{ delay: 1.2, duration: 2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -67,7 +67,7 @@ function Home() {
                             to='/contact'
                             className="flex w-[200px] items-center justify-center rounded-md border border-transparent bg-primary px-6 py-2 text-lg font-medium text-white shadow-sm hover:bg-ph"
                         >
-                            Let's take!
+                            Let's talk!
                         </Link>
 
                     </motion.div>
