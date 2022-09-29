@@ -198,7 +198,7 @@ function Home() {
                             <div className="flex justify-center md:flex-col">
                                 {item.map((icon) => (
                                     <motion.div whileHover={{ scale: 1.1 }}
-                                        className='h-16 w-16 bg-primary shadow-xl rounded-lg  shadow-green-400/90 mx-6 my-4 z-10 p-3 md:m-5 md:h-20 md:w-20'>
+                                        className='h-16 w-16 bg-green-400/95 shadow-xl rounded-lg  shadow-primary mx-6 my-4 z-10 p-3 md:m-5 md:h-20 md:w-20'>
                                         <img src={icon.url} alt="tech" className='w-full invert p-1 md:p-2' />
                                         {/* <h1>{icon.name}</h1> */}
                                     </motion.div>
